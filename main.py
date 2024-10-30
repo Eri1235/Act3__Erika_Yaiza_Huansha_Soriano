@@ -12,10 +12,12 @@ def incremento2(num1):
 def PareImpar(n):
     for i in range(0, n +1):
         n = i
-    if n % 2 == 0:
-        print("El ", n ," es par")
-    else:
-        print("El " , n ," es impar")
+        result = n
+        if n % 2 == 0:
+            print("El ",  n ," es par")
+        else:
+            print("El " , n ," es impar")
+    return result
 
 while(True):
     opcion = int(input("Elige una de estas opciones (1,2,3): "))
