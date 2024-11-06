@@ -20,21 +20,24 @@ def PareImpar(n):
     return result
 
 while(True):
-    opcion = int(input("Choose one of these options (1,2,3): "))
-    if opcion == 1:
-        num1 = int(input("Enter a dividend: "))
-        num2 = int(input("Enter a divisor: "))
-        print("Quotient = ", cociente(num1,num2))
-        print("Rest = ", resto(num1,num2))
-    elif opcion == 2:
-        num1 = int(input("Enter a number: "))
-        incremento2(num1)
-    elif opcion == 3:
-        num1 = int(input("Enter a number: "))
-        PareImpar(num1)
-    else:
-        break    
-
-
-
-    
+    try:
+        print(" 0.Exit \n","1.Division\n","2.Increase and Decrease\n","3.Even and odd\n")
+        opcion = int(input("Choose one of these options (0,1,2,3): "))
+        if opcion == 1:
+            num1 = int(input("Enter a dividend: "))
+            num2 = int(input("Enter a divisor: "))
+            print("Quotient = ", cociente(num1,num2))
+            print("Rest = ", resto(num1,num2))
+        elif opcion == 2:
+            num1 = int(input("Enter a number: "))
+            incremento2(num1)
+        elif opcion == 3:
+            num1 = int(input("Enter a number: "))
+            PareImpar(num1)
+        elif opcion == 0:
+            break
+        else:
+            print("Put one of the options")
+    except Exception as error:
+        print("Not an option :)")
+        print(error)
